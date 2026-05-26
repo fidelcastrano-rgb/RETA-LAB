@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { faqs } from '@/lib/data';
 
 export const metadata: Metadata = {
@@ -23,15 +24,43 @@ export default function FAQPage() {
     }))
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://reta-lab.co.uk/faq"
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       
       <div className="bg-[#1D4ED8] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
+          <nav className="text-xs md:text-sm font-semibold text-blue-200 mb-4 tracking-wide uppercase flex justify-center items-center gap-2">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-white">Frequently Asked Questions</span>
+          </nav>
           <h1 className="text-4xl font-heading font-bold mb-4">Frequently Asked Questions</h1>
           <p className="text-lg text-[#CBD5E1]">Everything you need to know about placing an order and product handling.</p>
         </div>

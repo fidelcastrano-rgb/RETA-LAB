@@ -47,16 +47,51 @@ export default async function BlogPostPage({ params }: Props) {
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Research Hub",
+        "item": "https://reta-lab.co.uk/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://reta-lab.co.uk/blog/${post.slug}`
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       
       <div className="bg-[#F8FAFC] pb-24">
          <div className="max-w-4xl mx-auto px-4 pt-12 pb-8">
-            <Link href="/blog" className="text-[#2563EB] font-bold text-sm mb-8 inline-block hover:underline">← Back to Research Hub</Link>
+            <nav className="text-xs md:text-sm font-semibold text-[#64748B] mb-8 uppercase tracking-wide flex items-center gap-2 flex-wrap">
+              <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/blog" className="hover:text-[#2563EB] transition-colors">Research Hub</Link>
+              <span>/</span>
+              <span className="text-[#0F172A] cut-text-1 max-w-[200px] md:max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">{post.title}</span>
+            </nav>
             
             <div className="mb-6 flex items-center gap-3">
               <span className="text-xs bg-[#2563EB] text-white font-bold px-3 py-1 rounded">{post.category}</span>

@@ -12,10 +12,39 @@ export const metadata: Metadata = {
 };
 
 export default function BlogListingPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Research Hub",
+        "item": "https://reta-lab.co.uk/blog"
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      
       <div className="bg-[#1D4ED8] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
+          <nav className="text-xs md:text-sm font-semibold text-blue-200 mb-4 tracking-wide uppercase flex justify-center items-center gap-2">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-white">Research Hub</span>
+          </nav>
           <h1 className="text-4xl font-heading font-bold mb-4">Peptide Research Hub</h1>
           <p className="text-lg text-[#CBD5E1]">Stay updated with the latest in compound sourcing and analysis.</p>
         </div>

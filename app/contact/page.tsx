@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const metadata = {
   title: 'Contact Us | RETA LAB UK',
   description: 'Reach out to RETA LAB UK via WhatsApp or Email for wholesale inquiries.',
@@ -7,10 +9,40 @@ export const metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact Us",
+        "item": "https://reta-lab.co.uk/contact"
+      }
+    ]
+  };
+
   return (
-    <div className="bg-[#F8FAFC] min-h-[calc(100vh-200px)] py-16">
-      <div className="max-w-7xl mx-auto px-4">
-         <h1 className="text-4xl font-heading font-bold text-[#0F172A] mb-12 text-center">Contact Reta Lab UK</h1>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <div className="bg-[#F8FAFC] min-h-[calc(100vh-200px)] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+           <nav className="text-xs md:text-sm font-semibold text-[#64748B] mb-6 uppercase tracking-wide flex justify-center items-center gap-2">
+             <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
+             <span>/</span>
+             <span className="text-[#0F172A]">Contact</span>
+           </nav>
+           <h1 className="text-4xl font-heading font-bold text-[#0F172A] mb-12 text-center">Contact Reta Lab UK</h1>
          
          <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
            
@@ -87,5 +119,6 @@ export default function ContactPage() {
          </div>
       </div>
     </div>
+    </>
   );
 }

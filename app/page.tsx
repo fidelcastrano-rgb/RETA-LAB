@@ -14,20 +14,59 @@ export const metadata: Metadata = {
 };
 
 export default function Homepage() {
-  const structuredData = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "RETA LAB UK",
     "url": "https://reta-lab.co.uk",
-    "logo": "https://picsum.photos/seed/logo/200/50",
-    "description": "UK's Most Trusted Research Peptide Wholesaler and Retailer",
+    "logo": "https://reta-lab.co.uk/logo.png",
+    "description": "UK's Most Trusted Research Peptide Wholesaler and Retailer, supplying >99% pure Retatrutide, Tirzepatide, Semaglutide and clinical research compounds.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+447341056054",
+      "contactType": "customer service",
+      "areaServed": "GB",
+      "availableLanguage": "en"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RETA LAB UK",
+    "url": "https://reta-lab.co.uk"
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.slice(0, 5).map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.answer
+      }
+    }))
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       {/* 1. Notice/announcement bar */}
@@ -128,9 +167,15 @@ export default function Homepage() {
                 </div>
               </li>
             </ul>
-            <Link href="/about" className="text-[#2563EB] font-bold hover:underline inline-flex items-center gap-2">
-              Learn about our standards →
-            </Link>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-wrap">
+              <Link href="/about" className="text-[#2563EB] font-bold hover:underline inline-flex items-center gap-2">
+                Learn about our standards →
+              </Link>
+              <span className="hidden sm:inline text-gray-300">|</span>
+              <Link href="/coa" className="text-[#FF6B1A] font-bold hover:underline inline-flex items-center gap-2">
+                Verify Batch HPLC Test Results (COA Hub) →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

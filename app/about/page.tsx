@@ -10,15 +10,45 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://reta-lab.co.uk/about"
+      }
+    ]
+  };
+
   return (
-    <div className="bg-[#F8FAFC] pb-20">
-      {/* 1. Hero */}
-      <div className="relative bg-[#0F172A] text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 hidden md:block">
-           <Image src="https://picsum.photos/seed/about-bg/1920/1080" alt="Lab Wide" fill sizes="100vw" className="object-cover" referrerPolicy="no-referrer" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Setting the Standard in UK Peptide Supply</h1>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <div className="bg-[#F8FAFC] pb-20">
+        {/* 1. Hero */}
+        <div className="relative bg-[#0F172A] text-white py-24 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 opacity-20 hidden md:block">
+             <Image src="https://picsum.photos/seed/about-bg/1920/1080" alt="Lab Wide" fill sizes="100vw" className="object-cover" referrerPolicy="no-referrer" />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <nav className="text-xs md:text-sm font-semibold text-[#CBD5E1] mb-4 tracking-wide uppercase flex justify-center items-center gap-2">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <span>/</span>
+              <span className="text-white">About Us</span>
+            </nav>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Setting the Standard in UK Peptide Supply</h1>
           <p className="text-xl text-[#CBD5E1] max-w-2xl mx-auto">
              Driven by analytical transparency and rigorous cold-chain logistics.
           </p>
@@ -42,7 +72,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold font-heading text-[#0F172A] mb-6">Our Story</h2>
             <div className="space-y-4 text-lg text-[#475569]">
               <p>RETA LAB UK was founded to address a critical gap in the European research compound market: consistent, verifiable quality.</p>
-              <p>For years, researchers dealt with fluctuating purities and counterfeit products. We built a supply chain focusing solely on established compounds like Retatrutide and Tirzepatide, enforcing strict 3rd-party HPLC testing on every single batch before it enters our system.</p>
+              <p>For years, researchers dealt with fluctuating purities and counterfeit products. We built a supply chain focusing solely on established compounds like Retatrutide and Tirzepatide, enforcing strict <Link href="/coa" className="text-[#FF6B1A] font-bold hover:underline">3rd-party HPLC testing</Link> on every single batch before it enters our system. You can verify our results on our <Link href="/coa" className="text-[#2563EB] font-bold hover:underline">Certificates of Analysis (COA) Hub</Link>.</p>
               <p>We do not compromise. We do not underdose. We exist to provide the foundation of valid research data.</p>
             </div>
           </div>
@@ -77,5 +107,6 @@ export default function AboutPage() {
       </div>
       
     </div>
+    </>
   );
 }

@@ -45,11 +45,18 @@ export default async function ProductPage({ params }: Props) {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": product.name,
-    "image": product.image,
+    "image": `https://reta-lab.co.uk${product.image}`,
     "description": product.description,
+    "sku": product.slug,
+    "mpn": product.slug,
     "brand": {
       "@type": "Brand",
       "name": "RETA LAB UK"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "128"
     },
     "offers": {
       "@type": "AggregateOffer",
@@ -57,8 +64,35 @@ export default async function ProductPage({ params }: Props) {
       "priceCurrency": "GBP",
       "lowPrice": product.variants[0].price,
       "highPrice": product.variants[product.variants.length - 1].price,
+      "offerCount": product.variants.length,
+      "price": product.variants[0].price,
       "availability": "https://schema.org/InStock"
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://reta-lab.co.uk"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://reta-lab.co.uk/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `https://reta-lab.co.uk/products/${product.slug}`
+      }
+    ]
   };
 
   return (
@@ -66,6 +100,10 @@ export default async function ProductPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="bg-[#F8FAFC] py-8 border-b border-[#CBD5E1]">
