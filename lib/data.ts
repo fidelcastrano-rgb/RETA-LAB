@@ -6,7 +6,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Retatrutide 40mg ×2 Bundle",
     tag: "ALLUVI",
     description: "Alluvi Retatrutide 40mg ×2 Bundle includes two pre-calibrated research devices designed for precision, consistency, and extended laboratory use. Ready-to-use with no preparation required, making it ideal for high-volume and multi-phase research workflows.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/04/Retatrutide-40mg-RD-Only-X-2.png",
+    image: "/alluvi-buy-alluvi-retatrutide-40mg-x2-bundle.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 315, savingsLabel: "" }
@@ -20,7 +20,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Retatrutide 20mg (R&D)",
     tag: "ALLUVI",
     description: "Alluvi Retatrutide 20mg is a pre-calibrated research device designed for precision and convenience in laboratory settings. Ready-to-use with no preparation required, ensuring consistent and efficient experimental use. Approved for human use.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/04/68c153351d1a646053b66e98_Retatrutide-5MG-With-Pen-1-scaled.jpg",
+    image: "/alluvi-buy-alluvi-retatrutide-20mg-pen.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 100, savingsLabel: "" }
@@ -34,7 +34,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Retatrutide BPC-157 & TB-500 40mg",
     tag: "ALLUVI",
     description: "Alluvi Retatrutide BPC-157 & TB-500 40mg is a ready-to-use research pen combining three advanced peptides in a pre-measured laboratory formulation. Designed strictly for research purposes, this prefilled device offers precision handling, consistency, and convenience for controlled experimental settings across the UK and Europe.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-Retatrutide-BPC-157-TB-500.png",
+    image: "/alluvi-alluvi-retatrutide-bpc-157-tb-500-40mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 139.99, savingsLabel: "" }
@@ -48,7 +48,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Glow GHK-Cu – BPC-157 & TB-500 70mg",
     tag: "ALLUVI",
     description: "Alluvi Glow GHK-Cu – BPC-157 & TB-500 70mg is a pre-calibrated research peptide blend developed for laboratory and in-vitro research purposes only. This advanced 70mg research formula combines three widely studied peptides in a ready-made research device, manufactured to high analytical standards and supplied exclusively for R&D use within the UK and Europe.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-Glow-GHK-Cu-–-BPC-157-TB-500-70mg.png",
+    image: "/alluvi-alluvi-glow-ghk-cu-bpc-157-tb-500-70mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 89.99, savingsLabel: "" }
@@ -62,7 +62,7 @@ const rawProducts: Product[] = [
     name: "Alluvi NAD+ 1000mg",
     tag: "ALLUVI",
     description: "Alluvi NAD+ 1000mg is a high-purity research compound supplied in a pre-calibrated research format for laboratory and in-vitro use only. Designed for controlled scientific investigation, this premium 1000mg NAD+ formulation is available across the UK and Europe exclusively for R&D purposes.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-NAD-1000mg.png",
+    image: "/alluvi-alluvi-nad-1000mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 169.99, savingsLabel: "" }
@@ -76,7 +76,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Tirzepatide 40mg",
     tag: "ALLUVI",
     description: "Alluvi Tirzepatide 40mg R&D Only is a high-purity, pre-calibrated research pen designed exclusively for laboratory and analytical research applications. Manufactured to strict quality standards and distributed across the UK and Europe, this ready-to-use research device ensures precision handling, consistency, and controlled laboratory study use. For research purposes only.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-Tirzepatide-40mg.png",
+    image: "/alluvi-alluvi-tirzepatide-40mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 119.99, savingsLabel: "" }
@@ -90,7 +90,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Retatrutide 40mg",
     tag: "ALLUVI",
     description: "Alluvi Retatrutide 40mg R&D Only is a high-purity, pre-calibrated research pen designed exclusively for laboratory and analytical research applications. Supplied across the UK and Europe, this ready-to-use research device ensures precision handling, structured laboratory testing, and reliable research consistency. For laboratory research use only.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Retatrutide-40mg-RD-Only-alluvii-1536x1026-1.png",
+    image: "/alluvi-alluvi-retatrutide-40mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 189.99, savingsLabel: "" }
@@ -104,7 +104,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Tirzepatide 20mg",
     tag: "ALLUVI",
     description: "Alluvi Tirzepatide 20mg R&D Only is a high-purity, pre-calibrated research pen designed exclusively for laboratory and analytical research use. Supplied across the UK and Europe, this ready-made research device ensures precision handling, structured testing, and consistent batch performance. For research purposes only.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-Tirzepatide-20mg.png",
+    image: "/alluvi-alluvi-tirzepatide-20mg.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 79.99, savingsLabel: "" }
@@ -118,7 +118,7 @@ const rawProducts: Product[] = [
     name: "Alluvi Retatrutide 20mg ×2 Bundle",
     tag: "ALLUVI",
     description: "Alluvi Retatrutide 20mg ×2 Bundle provides two pre-calibrated 20mg research pens designed exclusively for laboratory and analytical research use. Ideal for structured testing and extended research protocols, this bundle ensures batch consistency, secure packaging, and UK & EU supply. For research purposes only.",
-    image: "https://peptidelabuk.co.uk/wp-content/uploads/2026/02/Alluvi-Retatrutide-20mg-×2-Bundle.png",
+    image: "/alluvi-alluvi-retatrutide-20mg-x2-bundle.webp",
     coaUrl: "/coa/placeholder.pdf",
     variants: [
       { id: "var_0", name: "1 Item", price: 199.99, savingsLabel: "" }

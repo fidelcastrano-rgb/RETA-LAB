@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node compress_precision.js && node compress_blog.js && next build",
+    "build": "node download_alluvi.js && node compress_precision.js && node compress_blog.js && next build",
     "start": "next start",
     "lint": "eslint .",
     "clean": "next clean"
