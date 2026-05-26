@@ -1,0 +1,8 @@
+{
+  "name": "Remix: RETA LAB UK",
+  "description": "UK\u0027s Most Trusted Research Peptide Wholesaler and Retailer",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

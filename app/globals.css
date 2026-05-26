@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main-bg: #F8FAFC;
+  --color-secondary-bg: #EEF2F7;
+  --color-primary-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-soft-gray: #CBD5E1;
+  --color-success: #10B981;
+  --color-orange: #FF6B1A;
+
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-space-grotesk);
+}
+
+:root {
+  background-color: var(--color-main-bg);
+  color: var(--color-text-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee 40s linear infinite;
+}
