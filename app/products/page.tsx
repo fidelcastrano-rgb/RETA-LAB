@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Research Peptides Catalogue | RETA LAB UK',
   description: 'Shop our premium catalogue of research peptides including Retatrutide, Tirzepatide, and Semaglutide. Buy online in the UK.',
   alternates: {
-    canonical: '/products',
+    canonical: 'https://reta-lab.co.uk/products',
   },
 };
 
@@ -49,6 +49,7 @@ export default function ProductsPage() {
 
       <div className="py-12 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="sr-only">Available Research Peptide Compounds Catalogue</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
               <div key={product.slug} className="bg-white rounded border border-[#CBD5E1] shadow-sm flex flex-col overflow-hidden">

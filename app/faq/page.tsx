@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Frequently Asked Questions | RETA LAB UK',
   description: 'Find answers on Ordering, Shipping, Product Quality, and Legal parameters at Reta Lab UK.',
   alternates: {
-    canonical: '/faq',
+    canonical: 'https://reta-lab.co.uk/faq',
   },
 };
 
@@ -47,8 +47,9 @@ export default function FAQPage() {
                   <div className="space-y-3">
                     {faqs.filter(f => f.category === category).map((faq, i) => (
                       <details key={i} className="group bg-white border border-[#CBD5E1] rounded shadow-sm">
-                        <summary className="font-bold font-heading p-4 cursor-pointer text-[#0F172A] marker:text-[#2563EB] hover:text-[#2563EB] transition-colors">
-                          {faq.question}
+                        <summary className="font-bold font-heading p-4 cursor-pointer text-[#0F172A] hover:text-[#2563EB] transition-colors flex justify-between items-center group-open:text-[#2563EB]">
+                          <h3 className="text-base font-bold font-heading">{faq.question}</h3>
+                          <span className="text-[#2563EB] text-xl font-bold transition-transform duration-200 group-open:rotate-45">+</span>
                         </summary>
                         <div className="p-4 pt-0 text-[#475569] border-t border-[#EEF2F7]">
                           {faq.answer}

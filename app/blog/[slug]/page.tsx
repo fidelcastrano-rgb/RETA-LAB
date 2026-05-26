@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | RETA LAB UK`,
     description: post.excerpt,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `https://reta-lab.co.uk/blog/${post.slug}`,
     },
   };
 }

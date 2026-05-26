@@ -24,7 +24,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-[#CBD5E1]">
               <li><Link href="/products" className="hover:text-white transition-colors">All Peptides</Link></li>
               <li><Link href="/products/retatrutide-10mg" className="hover:text-white transition-colors">Retatrutide</Link></li>
-              <li><Link href="/products/tirzepatide-15mg" className="hover:text-white transition-colors">Tirzepatide</Link></li>
+              <li><Link href="/products/tirzepatide-10mg" className="hover:text-white transition-colors">Tirzepatide</Link></li>
               <li><Link href="/products/semaglutide-10mg" className="hover:text-white transition-colors">Semaglutide</Link></li>
             </ul>
           </div>

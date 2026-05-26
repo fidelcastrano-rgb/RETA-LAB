@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Buy ${product.name} UK | RETA LAB UK`,
     description: `Purchase premium grade ${product.name}. >99% purity guaranteed. Research peptide wholesaler based in the UK. Next day dispatch.`,
     alternates: {
-      canonical: `/products/${product.slug}`,
+      canonical: `https://reta-lab.co.uk/products/${product.slug}`,
     },
     openGraph: {
       title: `${product.name} | RETA LAB UK`,
@@ -153,6 +153,7 @@ export default async function ProductPage({ params }: Props) {
 
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <h2 className="text-2xl font-bold font-heading mb-8 text-[#0F172A] border-b border-[#EEF2F7] pb-4">Product Specifications & Care Guidelines</h2>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              <div className="p-6 bg-[#F8FAFC] border border-[#EEF2F7] rounded">
                <h3 className="font-heading font-bold text-xl mb-3 text-[#0F172A]">Package Contents</h3>

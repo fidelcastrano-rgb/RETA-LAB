@@ -13,7 +13,12 @@ export const metadata: Metadata = {
   keywords: 'Retatrutide UK, buy retatrutide uk, retatrutide peptide, research peptides UK, buy tirzepatide, buy semaglutide',
   metadataBase: new URL('https://reta-lab.co.uk'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://reta-lab.co.uk',
+  },
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   openGraph: {
     title: 'RETA LAB UK | Research Peptides',

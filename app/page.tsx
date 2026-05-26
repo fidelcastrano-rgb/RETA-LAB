@@ -7,8 +7,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: 'RETA LAB UK | UK\'s Most Trusted Research Peptide Supplier',
   description: 'Buy premium quality research peptides including Retatrutide, Tirzepatide, and Semaglutide in the UK. Guaranteed >99% purity with independent COAs.',
+  metadataBase: new URL('https://reta-lab.co.uk'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://reta-lab.co.uk',
   },
 };
 

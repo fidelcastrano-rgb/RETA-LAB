@@ -6,6 +6,9 @@ import { blogPosts } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'Research Blog | RETA LAB UK',
   description: 'Guides, research comparisons, and updates on peptides like Retatrutide and Tirzepatide.',
+  alternates: {
+    canonical: 'https://reta-lab.co.uk/blog',
+  },
 };
 
 export default function BlogListingPage() {

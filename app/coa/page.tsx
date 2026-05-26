@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Certificates of Analysis (COAs) | RETA LAB UK',
   description: 'Verify the quality and purity of our research peptides. Access our independent third-party HPLC testing results / Certificates of Analysis.',
   alternates: {
-    canonical: '/coa',
+    canonical: 'https://reta-lab.co.uk/coa',
   },
 };
 
@@ -27,6 +27,7 @@ export default function COAPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 className="text-2xl font-bold font-heading text-[#0F172A] mb-8 border-b border-[#CBD5E1] pb-4">Verified Batch HPLC Test Results</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {productCOAs.map((coa) => (
             <div key={coa.name} className="bg-white rounded-xl shadow-sm border border-[#E2E8F0] overflow-hidden flex flex-col">
