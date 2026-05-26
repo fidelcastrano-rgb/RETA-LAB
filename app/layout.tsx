@@ -10,8 +10,11 @@ import { OrderBuilder } from '@/components/OrderBuilder';
 export const metadata: Metadata = {
   title: 'RETA LAB UK | UK\'s Most Trusted Research Peptide Wholesaler',
   description: 'Premium quality research peptides including Retatrutide, Tirzepatide, and Semaglutide. >99% purity with independent COA verification.',
-  keywords: 'Retatrutide UK, buy retatrutide uk, retatrutide peptide, research peptides UK',
+  keywords: 'Retatrutide UK, buy retatrutide uk, retatrutide peptide, research peptides UK, buy tirzepatide, buy semaglutide',
   metadataBase: new URL('https://reta-lab.co.uk'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'RETA LAB UK | Research Peptides',
     description: 'UK\'s Most Trusted Research Peptide Wholesaler and Retailer',
@@ -26,6 +29,12 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     type: 'website',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0F172A',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

@@ -1,6 +1,9 @@
 export const metadata = {
   title: 'Contact Us | RETA LAB UK',
   description: 'Reach out to RETA LAB UK via WhatsApp or Email for wholesale inquiries.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

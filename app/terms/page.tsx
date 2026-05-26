@@ -1,6 +1,9 @@
 export const metadata = {
   title: 'Terms of Use | RETA LAB UK',
-  robots: 'noindex, nofollow' // as required by PDF spec
+  robots: 'noindex, nofollow', // as required by PDF spec
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 export default function TermsPage() {

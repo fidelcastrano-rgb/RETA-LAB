@@ -4,6 +4,9 @@ import { faqs } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | RETA LAB UK',
   description: 'Find answers on Ordering, Shipping, Product Quality, and Legal parameters at Reta Lab UK.',
+  alternates: {
+    canonical: '/faq',
+  },
 };
 
 export default function FAQPage() {

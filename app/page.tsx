@@ -2,6 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { products, faqs, blogPosts } from "@/lib/data";
 import { SeoContent } from "@/components/SeoContent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'RETA LAB UK | UK\'s Most Trusted Research Peptide Supplier',
+  description: 'Buy premium quality research peptides including Retatrutide, Tirzepatide, and Semaglutide in the UK. Guaranteed >99% purity with independent COAs.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function Homepage() {
   const structuredData = {

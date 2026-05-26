@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'About Us | RETA LAB UK',
   description: 'Learn about Reta Lab UK, the leading supplier of >99% purity research peptides. View our lab quality timelines and company story.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {
